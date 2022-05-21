@@ -1,7 +1,7 @@
 # State-of-the-Map-2022
 State of the Map 2022のアカデミックトラック発表に関するリポジトリ
 
-## APA Style
+## References(APA)
 
 Brovelli, M. A., Li, K. J., & Eom, K. S. (2021). Moving Toward Open Geospatial Systems: the un Open GIS Initiative. The International Archives of Photogrammetry, Remote Sensing and Spatial Information Sciences, 43, 183-188.
 https://www.proquest.com/docview/2585338000?pq-origsite=gscholar&fromopenview=true
