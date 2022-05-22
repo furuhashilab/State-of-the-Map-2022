@@ -97,6 +97,8 @@ UN Open GIS Initiative, 2022a, UN Open GIS Initiative. http://www.unopengis.org/
 
 提出用 Description
 
+提出用 Description
+
 # 1. BACKGROUND
 The UN Vector Tile Toolkit (https://github.com/un-vector-tile-toolkit/) is a package of open source tools designed under the UN Open GIS Initiative to enable UN Geospatial Information Services, national government It is designed to enable public basemap providers, such as mapping organizations, to leverage modern web mapping technologies to deliver basemap vector tiles. (Eom et al., 2017; M. A. Brovelli, 2021; UN Open GIS Initiative, 2022)
 
@@ -138,7 +140,11 @@ The browsing device that connect to the UNVT Portable device via Wi-Fi are imple
 
 We plan to bring the UNVT Portable implemented in this way to local governments and conduct demonstration tests to see if it functions effectively in actual operations.
 
-# 6. REFERENCES.
+# 6. CONCLUSION
+The conclusions of this study will be presented on the day of SotM 2022.
+
+
+# 7. REFERENCES
 * Eom, K.S., Arias, R., Brovelli, M.A., Criloux, G., Kang, H.K., Li, K.J., 2017, United Nations Open GIS initiative: the first year of activities, Geoingegneria Ambientale e Mineraria, 2017, 151(2), 5–8, ISSN: 11219041.
 * Fujimura, H., Martin Sanchez, O., Gonzalez Ferreiro, D., Kayama, Y., Hayashi, H., Iwasaki, N., Mugambi, F., Obukhov, T., Motojima, Y., and Sato, T., 2019, Design and development of the UN Vector Tile Toolkit, Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci., XLII-4/W14, 57–62, https://doi.org/10.5194/isprs-archives-XLII-4-W14-57-2019.
 * The United Nations Vector Tile Toolkit, 2022. https://github.com/un-vector-tile-toolkit (22 May 2022).
