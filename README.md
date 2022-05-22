@@ -1,11 +1,9 @@
 # State-of-the-Map-2022
 State of the Map 2022のアカデミックトラック発表に関するリポジトリ
 
+---
 
-
-
-
----# Proposal title
+# Proposal title
 RaspberryPi デバイスを用いた OpenStreetMap プリインストールオフライン地図サーバ UNVT Portable の開発と課題  
 Development of OpenStreetMap pre-installed map server - "UNVT Portable" using RaspberryPi on a local network for Crisis Response in offline situations. 
 
