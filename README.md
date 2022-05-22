@@ -5,8 +5,6 @@ State of the Map 2022のアカデミックトラック発表に関するリポ�
 
 # Proposal title
 RaspberryPi デバイスを用いた OpenStreetMap プリインストールオフライン地図サーバ UNVT Portable の開発と課題  
-Development of OpenStreetMap pre-installed map server - "UNVT Portable" using RaspberryPi on a local network for Crisis Response in offline situations. 
-
 Development of UNVT Portable, a map server with OpenStreetMap pre-installed using a RaspberryPi on a local network in offline situations during disasters.
 
 # Abstract 1-2 sentences
@@ -97,31 +95,31 @@ UN Open GIS Initiative, 2022a, UN Open GIS Initiative. http://www.unopengis.org/
 
 ---
 
-## English
-### 1. BACKGROUND
+提出用 Description
+
+# 1. BACKGROUND
 The UN Vector Tile Toolkit (https://github.com/un-vector-tile-toolkit/) is a package of open source tools designed under the UN Open GIS Initiative to enable UN Geospatial Information Services, national government It is designed to enable public basemap providers, such as mapping organizations, to leverage modern web mapping technologies to deliver basemap vector tiles. (Eom et al., 2017; M. A. Brovelli, 2021; UN Open GIS Initiative, 2022)
 
-The toolkit is packaged with existing proven open source software to generate, host, style, and optimize fast, interoperable basemap vector tiles for use in a variety of application frameworks. (Fujimura et al., 2019, The United Nations Vector Tile Toolkit, 2022)
+The UNVT toolkit is packaged with existing proven open source software to generate, host, style, and optimize fast, interoperable basemap vector tiles for use in a variety of application frameworks. (Fujimura et al., 2019, The United Nations Vector Tile Toolkit, 2022)
 
-UNVT Portable is a package for RaspberryPi that acts as a map hosting server and can be freely accessed from a web browser within a local network.
+UNVT Portable is a package for RaspberryPi that acts as a vector/raster tile map hosting server and can be freely accessed from a web browser within a local network.
 
-It is mainly intended to function in an offline environment in the event of a severe disaster, and can be used at local government offices where disaster response headquarters are set up to combine aerial drone images with OpenStreetMap and various open data tile data sets that have been prepared in advance and overlay them on a web browser. The system can display an overlay of the images in a web browser. As a result, the system is expected to play an active role in use cases, enabling an efficient grasp of the situation throughout the disaster area and prompt relief and reconstruction work.
+It is mainly intended to function in an offline environment in the event of a severe disaster, and can be used at local government offices where disaster crisis response headquarters are set up to combine aerial drone imagaries with OpenStreetMap and various open data sets that have been prepared in advance and overlay them on a web browser. The system can display an overlay of the images in a web browser. As a result, the system is expected to play an active role in use cases, enabling an efficient grasp of the situation throughout the disaster area and prompt relief and reconstruction work.
 
-### 2. PURPOSE
-In this study, assuming the currently available RaspberryPi 4 device, we will construct a pre-installed dataset based on OpenStreetMap with realistically available specifications, and the storage method and other image tile data, etc., to be combined with OSM and each other. patterns, and calculate the appropriate storage allocation of basemaps, drone aerial photography data, and evacuation shelter and hazard map data for thematic mapping that is available as open data.
+# 2. PURPOSE
+In this study, assuming the currently available RaspberryPi 4 device, we will build a pre-installed dataset based on OpenStreetMap with realistically available specifications, and the storage method and other tiled dataset, etc., to be combined with OSM and each other. patterns, and calculate the appropriate storage allocation of basemaps, drone aerial photography data, and evacuation shelter and hazard map data for thematic mapping that is available as open data.
 
 In addition, we will conduct demonstration tests at local governments to identify issues in using the system on business terminals with secure settings.
 
-### 3. STRATEGY
+# 3. STRATEGY
 Our research group has entered into disaster management agreements with several local governments in Japan, and is engaged in information support activities to provide prompt aerial drone photography in the event of a large-scale disaster. In the process of providing data, there is a current situation in which geospatial information is not always transferred smoothly, depending on the information literacy of the local governments to which the data is provided and the operating environment of the available terminals.
 
-Furthermore, the typhoon disaster in 2019 will paralyze infrastructure, including large-scale power outages and Internet outages, and we hypothesize that an easy-to-use web map-like system that functions properly even in an offline environment is needed, and will confirm its effectiveness through demonstration tests.
+Furthermore, we hypothesize that an easy-to-use web map-like system that functions properly in an offline environment is needed because the infrastructure was paralyzed by the typhoon disaster in 2019, including large-scale power outages and Internet outages, and will confirm its effectiveness through demonstration experiments.
 
 By designing on the premise of RaspberryPi devices, which are relatively inexpensive in terms of both performance and cost, the UNVT Portable terminal completed through this research will be deployed in large numbers to prepare for large-scale natural disasters that may occur in the future.
 
-
-### 4. DESIGN
-Fujimura has already proposed an effective partitioning method for the worldwide OpenStreetMap dataset, and we believe this method is still valid as of 2022.
+# 4. DESIGN
+Fujimura, 2019 has already proposed an effective partitioning method for the worldwide OpenStreetMap dataset, and we think this method is still valid as of 2022.
 
 Based on the assumption of a RaspberryPi 4, we will compare and evaluate the capacity of the MicroSD card that can be installed and the performance of reading/rendering speed, and define 150 USD as the upper cost limit, which is half the price of 300 USD, the price range of a typical Chromebook.
 
@@ -129,28 +127,22 @@ The web hosting server is currently Apache, but we are considering using open so
 
 For local network communication, wireless connection using Wi-Fi was designed as the highest priority.
 
-The connection to UNVT Portable uses an automatic Wi-Fi connection function with QR codes, and each subject map is displayed with a QR code for each subject map, etc., designed to allow even municipal staff unfamiliar with digital terminals to easily access geospatial information.
+The connection to UNVT Portable uses an automatic Wi-Fi connection function with QR codes, and each thematic map is displayed with a QR code for each thematic map, etc., designed to allow even municipal staff unfamiliar with digital terminals to easily access geospatial information.
 
-
-### 5. DEVELOPMENT
+# 5. DEVELOPMENT
 We generated multiple variations of tile datasets that are versatile depending on the data source. Specifically, we used OpenStreetMap, SRTM, Landsat imagery, and open geospatial data provided by the Japanese government.
 
-In this use case, all data is pre-installed on a RaspberryPi terminal in combination with the RaspberryPi OS and various web hosting/Wi-Fi access point tools implemented as UNVT Portable.
+In this use case, all data is pre-installed on a RaspberryPi device in combination with the RaspberryPi OS and various web hosting/Wi-Fi access point tools implemented as UNVT Portable.
 
-The terminals that connect to the UNVT Portable terminal via Wi-Fi are implemented for cross-platform use, including smartphones, tablets, and PC terminals.
+The browsing device that connect to the UNVT Portable device via Wi-Fi are implemented for cross-platform use, including smartphones, tablets, and PC terminals.
 
 We plan to bring the UNVT Portable implemented in this way to local governments and conduct demonstration tests to see if it functions effectively in actual operations.
 
-
-## 8. REFERENCES.
-
-Eom, K.S., Arias, R., Brovelli, M.A., Criloux, G., Kang, H.K., Li, K.J., 2017, United Nations Open GIS initiative: the first year of activities, Geoingegneria Ambientale e Mineraria, 2017, 151(2), 5–8, ISSN: 11219041.
-
-Fujimura, H., Martin Sanchez, O., Gonzalez Ferreiro, D., Kayama, Y., Hayashi, H., Iwasaki, N., Mugambi, F., Obukhov, T., Motojima, Y., and Sato, T., 2019, Design and development of the UN Vector Tile Toolkit, Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci., XLII-4/W14, 57–62, https://doi.org/10.5194/isprs-archives-XLII-4-W14-57-2019.
-
-The United Nations Vector Tile Toolkit, 2022. https://github.com/un-vector-tile-toolkit (22 May 2022).
-
-UN Open GIS Initiative, 2022a, UN Open GIS Initiative. http://www.unopengis.org/ (22 May 2022).
+# 6. REFERENCES.
+* Eom, K.S., Arias, R., Brovelli, M.A., Criloux, G., Kang, H.K., Li, K.J., 2017, United Nations Open GIS initiative: the first year of activities, Geoingegneria Ambientale e Mineraria, 2017, 151(2), 5–8, ISSN: 11219041.
+* Fujimura, H., Martin Sanchez, O., Gonzalez Ferreiro, D., Kayama, Y., Hayashi, H., Iwasaki, N., Mugambi, F., Obukhov, T., Motojima, Y., and Sato, T., 2019, Design and development of the UN Vector Tile Toolkit, Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci., XLII-4/W14, 57–62, https://doi.org/10.5194/isprs-archives-XLII-4-W14-57-2019.
+* The United Nations Vector Tile Toolkit, 2022. https://github.com/un-vector-tile-toolkit (22 May 2022).
+* UN Open GIS Initiative, 2022a, UN Open GIS Initiative. http://www.unopengis.org/ (22 May 2022).
 
 
 
